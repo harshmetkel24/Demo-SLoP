@@ -21,3 +21,14 @@ function addTask() {
 
 // Event listener for adding a task
 addButton.addEventListener("click", addTask);
+
+// Function to delete a task
+function deleteTask(e) {
+  if (e.target.classList.contains("delete")) {
+    const li = e.target.parentElement;
+    taskList.removeChild(li);
+  }
+}
+
+// Event listener for deleting a task
+taskList.addEventListener("click", deleteTask);
